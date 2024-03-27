@@ -1,0 +1,29 @@
+body {
+    font-family: "Quicksand", sans-serif;
+}
+
+/* Style for Header */
+header {
+    font-family: "Acme", sans-serif;
+}
+header .github-button {
+    letter-spacing: 1px;
+}
+
+/* Style for Profile Section */
+.profile-section .description {
+    text-align: justify;
+}
+
+/* Style for Navbar */
+.navbar .active {
+    background-color: #373737;
+    color: #ffffff !important;
+    border-radius: 5px;
+}
+.navbar a:hover {
+    color: #000000;
+}
+.navbar .nav-item {
+    padding: 3px;
+}
