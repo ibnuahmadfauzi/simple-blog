@@ -8,6 +8,8 @@ class HomePageController extends Controller
 {
     public function index()
     {
-        return view('client.pages.homepage.index');
+        return view('client.pages.homepage.index', [
+            "title" => "HomePage"
+        ]);
     }
 }

@@ -6,7 +6,7 @@
         @for ($i = 0; $i < 6; $i++)
             <div class="col-lg-6">
 
-                <a href="#" class="text-decoration-none">
+                <a href="/single-page" class="text-decoration-none">
                     <div class="posts">
                         <div class="post p-3">
                             <div class="thumbnail"
@@ -16,7 +16,8 @@
                                 <a href="" class="text-decoration-none">
                                     <i class="bi bi-person-gear"></i> Ibnu Ahmad
                                     Fauzi
-                                </a> - 12/03/2024
+                                </a> - 12/03/2024 - <a href="" class="text-decoration-none"><i class="bi bi-tag"></i>
+                                    Personal</a>
                             </small>
                             <div class="title mt-2">
                                 <h6 class="fw-bold text-dark">
@@ -31,7 +32,7 @@
                                 </p>
                             </div>
                             <div class="link">
-                                <a href="#" class="text-decoration-none">Read more ...</a>
+                                <a href="/single-page" class="text-decoration-none">Read more ...</a>
                             </div>
                         </div>
                     </div>

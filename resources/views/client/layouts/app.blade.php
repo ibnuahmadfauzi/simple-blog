@@ -14,7 +14,7 @@
         rel="stylesheet">
 
     <title>
-        Simple Blog | Home Page
+        Koder Gabut {{ isset($title) ? ' | ' . $title : '' }}
     </title>
 
     {{-- Bootstrap CSS --}}
@@ -36,10 +36,13 @@
             <div class="col-lg-8">
 
                 {{-- Header Section --}}
-                <header class="py-5 d-flex align-items-center justify-content-between">
-                    <div class="logo d-flex align-items-center">
-                        <img src="/assets/images/favicon/pawprint.png" class="me-3" height="50">
-                        <h2 class="p-0 m-0 fw-bold">Simple Blog</h2>
+                <header class="pt-5 d-flex align-items-center justify-content-between">
+                    <div class="logo">
+                        <h2 class="p-0 m-0 fw-bold">
+                            <a href="/" class="text-decoration-none text-dark d-flex align-items-center"><img
+                                    src="/assets/images/favicon/pawprint.png" class="me-3" height="50"> Koder
+                                Gabut</a>
+                        </h2>
                     </div>
                     <div class="github-button">
                         <a class="btn btn-sm btn-dark px-4">
@@ -49,24 +52,30 @@
                 </header>
                 {{-- end Header Section --}}
 
-                {{-- Profile Section --}}
-                <div class="profile-section d-flex align-items-center">
-                    <div class="image me-5">
-                        <img src="https://img.stablecog.com/insecure/1920w/aHR0cHM6Ly9iLnN0YWJsZWNvZy5jb20vNmYwNjdmZGUtNDAyMy00OTBiLTllODEtYTlkYjhlZmE3MmI4LmpwZWc.webp"
-                            height="150px" class="rounded-circle">
-                    </div>
-                    <div class="description fw-bold">
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, sunt animi harum nisi
-                            voluptatibus eveniet.
-                        </p>
-                        <p>
-                            Ipsa, corporis, doloremque repudiandae architecto inventore autem corrupti ipsum voluptate
-                            numquam, illum ab asperiores perspiciatis provident totam consequatur temporibus est.
-                        </p>
-                    </div>
-                </div>
-                {{-- end Profile Section --}}
+                @if (isset($title))
+                    @if ($title == 'HomePage')
+                        {{-- Profile Section --}}
+                        <div class="profile-section d-flex align-items-center mt-5">
+                            <div class="image me-5">
+                                <img src="https://img.stablecog.com/insecure/1920w/aHR0cHM6Ly9iLnN0YWJsZWNvZy5jb20vNmYwNjdmZGUtNDAyMy00OTBiLTllODEtYTlkYjhlZmE3MmI4LmpwZWc.webp"
+                                    height="150px" class="rounded-circle">
+                            </div>
+                            <div class="description fw-bold">
+                                <p>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, sunt animi harum nisi
+                                    voluptatibus eveniet.
+                                </p>
+                                <p>
+                                    Ipsa, corporis, doloremque repudiandae architecto inventore autem corrupti ipsum
+                                    voluptate
+                                    numquam, illum ab asperiores perspiciatis provident totam consequatur temporibus
+                                    est.
+                                </p>
+                            </div>
+                        </div>
+                        {{-- end Profile Section --}}
+                    @endif
+                @endif
 
                 {{-- Mavbar --}}
                 <nav class="navbar navbar-expand-lg bg-body-tertiary mt-4">
